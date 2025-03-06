@@ -1,0 +1,312 @@
+:root {
+  --text-color: #6ad093;
+  --primary-color: #32185d;
+  --secondary-color: #232323;
+}
+body {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightgray;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.header img {
+  display: block;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 10px;
+  border-radius: 15rem;
+  font-size: 1rem;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: var(--text-color);
+}
+
+main.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.primary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  position: relative;
+  padding: 2vh 2vw;
+  color: whitesmoke;
+}
+
+.primary-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url("../assets/pasta.webp");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.primary-section p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  width: 65%;
+}
+
+@media (max-width: 768px) {
+  .primary-section::before {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
+      url("../assets/pasta.webp");
+  }
+  .primary-section p {
+    width: 100%;
+  }
+}
+
+.secondary-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4vw;
+}
+@media (max-width: 768px) {
+  .secondary-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 2vh 2vw;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+}
+
+.card header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+.card header h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.card header img {
+  display: block;
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.card main {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.card main p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.card footer {
+  height: 100%;
+  align-content: end;
+}
+
+.primary-btn {
+  display: flex;
+  min-width: 50%;
+  border: white 1px solid;
+  border-radius: 1rem;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  place-self: center;
+}
+.primary-btn span {
+  font-size: 1rem;
+  padding: 1vh 1vw;
+  width: 100%;
+}
+
+.primary-btn a:visited {
+  color: var(--primary-color);
+}
+
+.card:last-child div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vh;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vh;
+  margin-top: 5vh;
+  padding: 2vh 2vw;
+  text-align: center;
+  border-top: 1px solid var(--primary-color);
+}
+
+footer.footer div:first-child {
+  width: 5vw;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog:open {
+  border: none;
+  animation: fadeIn 2.5s ease-in-out forwards;
+  background-color: transparent;
+  margin: 10vh auto;
+}
+
+dialog aside.card {
+  width: 20vw;
+  padding: 2vh 2vw 3vh 2vw;
+  margin: 0 auto;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+@media (max-width: 1440px) {
+  dialog aside.card {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  dialog aside.card {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  dialog aside.card {
+    width: 80vw;
+  }
+}
+
+dialog aside.card header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+dialog aside.card header svg {
+  cursor: pointer;
+}
+
+dialog aside.card header h2 {
+  color: var(--primary-color);
+  align-self: center;
+  text-decoration: underline;
+}
+
+dialog aside.card main ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+dialog aside.card main ul li {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+dialog aside.card main ul li:last-child span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.secondary-btn {
+  display: flex;
+  min-width: 50%;
+  border: white 1px solid;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  place-self: center;
+}
+.secondary-btn span {
+  font-size: 1rem;
+  padding: 1vh 1vw;
+  width: 100%;
+}
+
+.secondary-btn a:visited {
+  color: var(--text-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding: 2vh 2vw;
+  border-radius: 0.8rem;
+}

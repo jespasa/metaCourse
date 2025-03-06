@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jose Espasa" />
+    <meta name="title" content="Little Lemon" />
+    <meta
+      name="description"
+      content="Little Lemon is a restaurant that offers a variety of dishes and drinks." />
+    <meta name="revised" content="Thursday, March 6th, 2025, 10:30 am" />
+    <meta name="rating" content="safe for kids" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <title>Little Lemon</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <img src="assets/Little-Lemon-logos/Asset 14@4x.png" alt="logo" />
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li id="modalMenuNav">Menu</li>
+          <li id="modalBookNav">Book</li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="hero">
+      <section class="primary-section">
+        <h1>30% Off This Weekend</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
+          enim illo ut vitae ad ipsam at voluptatibus, sint numquam ab corrupti
+          earum, minus provident quisquam dicta dignissimos qui delectus
+          maiores. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Asperiores enim illo ut vitae ad ipsam at voluptatibus, sint numquam
+          ab corrupti earum, minus provident quisquam dicta dignissimos qui
+          delectus maiores.
+        </p>
+      </section>
+      <section class="secondary-section">
+        <article class="card">
+          <header>
+            <h2>Our Menu</h2>
+            <img src="assets/our_menu.webp" alt="menu" />
+          </header>
+          <main>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quidem, voluptates, quod, quos quas quae doloribus quibusdam
+              voluptatum nemo doloremque autem. Quisquam quidem, voluptates,
+              quod, quos quas quae doloribus quibusdam voluptatum nemo
+              doloremque autem.
+            </p>
+          </main>
+          <footer>
+            <button class="primary-btn" type="button" id="buttonMenu">
+              <span>View Menu</span>
+            </button>
+          </footer>
+        </article>
+        <article class="card">
+          <header>
+            <h2>Book a table</h2>
+            <img src="assets/book.webp" alt="book table" />
+          </header>
+          <main>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+              molestiae itaque illo possimus nulla animi in corrupti nobis quia
+              asperiores? Dolorem ab quibusdam ipsam nisi, deleniti blanditiis
+              voluptatibus corrupti iure.
+            </p>
+          </main>
+          <footer>
+            <button id="buttonBook" class="primary-btn" type="button">
+              <span>Book Now</span>
+            </button>
+          </footer>
+        </article>
+        <article class="card">
+          <header>
+            <h2>Opening Hours</h2>
+            <img src="assets/horario.webp" alt="opening hours" />
+          </header>
+          <main>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              nostrum, nobis quibusdam provident optio eius cum quia, reiciendis
+              consectetur assumenda deserunt cumque distinctio totam aliquam
+              voluptatum eaque! Veniam, dicta culpa.
+            </p>
+            <div>
+              <p>Mon - Fri: 9am - 10pm</p>
+              <p>Sat: 2pm - 11pm</p>
+              <p>Sun: 2pm - 9pm</p>
+            </div>
+          </main>
+        </article>
+      </section>
+    </main>
+    <footer id="about" class="footer">
+      <div>
+        <img src="assets/Little-Lemon-logos/Asset 18@4x.png" alt="logo" />
+      </div>
+      <div>
+        <p>&#169; Copyright Little Lemon</p>
+      </div>
+    </footer>
+    <dialog id="modalBook" role="dialog">
+      <aside class="card">
+        <header>
+          <svg
+            id="closeBook"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="2">
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+          <h2>Book a table</h2>
+        </header>
+        <main>
+          <form class="form" id="formBook">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required />
+            <button class="secondary-btn" type="submit">
+              <span>Book Now</span>
+            </button>
+          </form>
+        </main>
+      </aside>
+    </dialog>
+    <dialog id="modalMenu" role="dialog">
+      <aside class="card">
+        <header>
+          <svg
+            id="closeMenu"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="2">
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+          <h2>Menu</h2>
+        </header>
+        <main>
+          <ul>
+            <li>Focazza</li>
+            <li>Spaguetti</li>
+            <li>Tiramisu</li>
+            <li>One drink</li>
+            <li>Total Price: <span>13.00€</span></li>
+          </ul>
+        </main>
+      </aside>
+    </dialog>
+
+    <script src="js/commonFunctions.js"></script>
+  </body>
+</html>
